@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Welcome page</title>
+<style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #e7e7e7;
+  border: none;
+  color: #555555;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px;
+  width: 400px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+</head>
+
+
+  <hr>
+  <div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">  
+<img src="https://images.pexels.com/photos/1367188/pexels-photo-1367188.jpeg?cs=srgb&dl=4k-wallpaper-black-and-white-cloudiness-1367188.jpg&fm=jpg" height="100%" width="100%"/> 
+  </div>
+ 
+
+  <div style = "text-align:center" >
+    <h1><br>請選擇您想查詢的內容</h1>
+    
+    
+  </div><br><br>
+  
+  
+  <div style = "text-align:center">
+    
+    <button class="button" style="vertical-align:middle" onclick="javascript:location.href='http://127.0.0.1:5000/item_query'"><span>物品統計資料 </span></button>
+  
+ 
+    
+    <button class="button" style="vertical-align:middle" onclick="javascript:location.href='http://127.0.0.1:5000/user_query'"><span>玩家商品推薦 </span></button>
+  </div>
+  <div>
+    
+  
+ 
+
+	
+</body>
+</html>
+

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<title>玩家商品推薦</title>
+<div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">  
+    <img src="https://images.pexels.com/photos/906018/pexels-photo-906018.jpeg?cs=srgb&dl=blinds-curiosity-eyes-906018.jpg&fm=jpg" height="100%" width="100%"/> 
+</div>
+    
+<center><h3><font color="black" size="30">請輸入您想查詢的玩家帳號</font></h3></center>
+<p></p>
+<form action = {{ url_for( "user_result" ) }} method='get'>
+    <center><label>玩家帳號: </label></center>
+    <center><input type='textbox' name='user_id' style="width: 200px;height: 20px;border-color:black;border-width:1px;border-style:groove"></center>
+    <center><input type='submit' name ='submit' style="font-size:15px;width:80px;height:30px;border-width:1px"></center>
+</form>

@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Welcome page</title>
+<style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #e7e7e7;
+  border: none;
+  color: #555555;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+  table {
+    
+    width:%;
+}
+table, th, td {
+    border: 0px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+}
+table#t01 th {
+    background-color: black;
+    color: white;
+}
+  
+</style>
+</head>
+
+
+  <hr>
+  <div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">  
+<img src="https://images.pexels.com/photos/925744/pexels-photo-925744.png?cs=srgb&dl=black-and-white-blank-blur-925744.jpg&fm=jpg" height=1200 width="100%"/> 
+  </div>
+ 
+  <br><br>
+  <div style = "text-align:center;color:white;" >
+  <h1>玩家{{ user_id }}的商品 & 社群推薦结果</h1>
+  
+  
+</div><br><br><br>
+
+
+<!-- <div style = "text-align:center">
+  
+  <button class="button" style="vertical-align:middle"><span>物品统计资料 </span></button>
+
+
+  
+  <button class="button" style="vertical-align:middle"><span>玩家商品推荐 </span></button>
+</div>
+-->
+  <br><br>
+<div style="width:400px;
+height:150px;
+background-color:;
+
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;">
+  <h2 style = "text-align:center">基本資訊</h2>
+<table id="t01">
+<tr>
+  <th>玩家帳號</th>
+  <th>角色名稱</th>
+  <th>總消費金額</th>
+  <th>RFM 類別</th>
+ 
+</tr>
+<tr>
+  {% for info in basic_information %}
+  <td>{{ info }}</td>
+  {% endfor %}
+  <td>{{ rfm_type }}</td>
+</tr>
+
+</table>
+</div>
+<br><br><br><br><br>
+<div>
+  
+
+<table border-radius: 0px;>
+<tr>
+
+<h2 style = "text-align:center">推薦結果</h2>
+
+<div style="">
+<tr>
+
+<td style="height:200px;width:400px;vertical-align:top;">
+<h3>推薦物品</h3>
+
+<table id="t01">
+<tr>
+  <th>編號</th>
+  <th>類別</th>
+  <th>已售數量</th>
+</tr>
+{% for recom_item in items %}
+<tr>
+  {% for info in recom_item %}
+  <td>{{ info }}</td>
+  {% endfor %}
+</tr>
+{% endfor %}
+</table></td>
+<td style="height:200px;width:400px;vertical-align:top;">
+<h3>推薦好友</h3>
+
+<table id="t01">
+<tr>
+  <th>玩家帳號</th>
+  <th>職業</th>
+  <th>性別</th>
+</tr>
+{% for recom_friend in friends %}
+<tr>
+  {% for info in recom_friend %}
+  <td>{{ info }}</td>
+  {% endfor %}
+</tr>
+{% endfor %}
+</table></td>
+<td style="height:200px;width:400px;vertical-align:top;">
+<h3>推薦伴侶</h3>
+
+<table id="t01">
+<tr>
+  <th>玩家帳號</th>
+  <th>職業</th>
+  <th>總消費金額</th>
+</tr>
+<tr>
+  {% for info in recom_partner %}
+  <td>{{ info }}</td>
+  {% endfor %}
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+
+</tr>
+</table>
+
+</div>
+
+
+<br>
+<div style = "text-align:center">
+  <button class="button" onclick="javascript:location.href='http://127.0.0.1:5000/welcome'" style="vertical-align:middle;color:black"><span>返回 </span></button>	
+</body>
+</html>
