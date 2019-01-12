@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<title>物品推薦查詢</title>
+<hr>
+<div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">  
+<img src="https://images.pexels.com/photos/103891/pexels-photo-103891.jpeg?cs=srgb&dl=archery-arrows-black-and-white-103891.jpg&fm=jpg" height="100%" width="100%"/> 
+</div>
+<center><h2>請輸入您想查詢的物品編號</h2></center>
+<p></p>
+<form action = {{ url_for( "item_result" ) }} method='get' style="color:azure">
+    <center><h2><br>請輸入物品ID </br></h2></center>
+    <center><input type='textbox' name='item_id'></center>
+    <center><input type='submit' name ='submit'></center>
+</form>

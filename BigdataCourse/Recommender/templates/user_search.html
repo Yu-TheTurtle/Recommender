@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Search_user</title>
+<style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: black;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+</head>
+
+
+  <hr>
+  <div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">  
+<img src="https://images.pexels.com/photos/906018/pexels-photo-906018.jpeg?cs=srgb&dl=blinds-curiosity-eyes-906018.jpg&fm=jpg" height="100%" width="100%"/> 
+  </div>
+ 
+
+  <div style = "text-align:center" >
+    <h1><br>請輸入用戶ID</h1>
+    
+    <input type="text" name="user_id" >
+  </div><br>
+  
+  
+  <div style = "text-align:center">
+    
+    <button class="button" style="vertical-align:middle"><span>搜尋 </span></button>
+    <button class="button" style="vertical-align:middle"><span>返回 </span></button>
+  
+ 
+    
+    
+  </div>
+  <div>
+    
+  
+ 
+
+	
+</body>
+</html>
+

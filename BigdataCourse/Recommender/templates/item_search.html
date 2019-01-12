@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Search_item</title>
+<style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: white;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+</head>
+
+
+  <hr>
+  <div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">  
+<img src="https://images.pexels.com/photos/103891/pexels-photo-103891.jpeg?cs=srgb&dl=archery-arrows-black-and-white-103891.jpg&fm=jpg" height="100%" width="100%"/> 
+  </div>
+ 
+
+  <div style = "text-align:center;color:white">
+      <h2><br>請輸入物品ID</h2>
+      <form name="userform" method='GET' action = {{ url_for ( "item_result" ) }}></form>
+      <input type="text" name="item_id" >
+  </div><br>
+  
+  
+  <div style = "text-align:center">
+    
+    <button class="button" style="vertical-align:middle" onclick="{{ url_for('item_result') }}"><span>搜尋 </span></button>
+    <button class="button" style="vertical-align:middle" action = {{ url_for ( "welcome" ) }}><span>返回 </span></button>
+  
+ 
+    
+    
+  </div>
+  <div>
+    
+  
+ 
+
+	
+</body>
+</html>
+
